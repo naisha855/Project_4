@@ -1,3 +1,9 @@
+학습 목표
+
+- SCSS활용 능력
+
+- OPEN API 정보 가져오기
+
 
 템플릿
 https://preview.themeforest.net/item/pustaka-woocommerce-theme-for-book-store/full_screen_preview/18632697?irgwc=1&clickid=xyEXiMWRfxyLTSTwUx0Mo3QGUkD1LyzgxVAoSc0&iradid=275988&irpid=369282&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1=&utm_campaign=af_impact_radius_369282&utm_medium=affiliate&utm_source=impact_radius
@@ -5,3 +11,17 @@ https://preview.themeforest.net/item/pustaka-woocommerce-theme-for-book-store/fu
 
 내용 사이트
 https://www.bookoa.co.kr/
+
+보이는 수정 사항
+
+- oul none하기
+
+-section간 간격 정리
+
+- section1 오른쪽 정리
+
+- section1 효과 안준 것 같은 네모 그림자?
+
+- section 3에 추가 텍스트? 여유있으면 정리
+
+- section7에 span sns 태그

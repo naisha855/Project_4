@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol, ul, li {
+  list-style: 0;
+}
+
+a {
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
+}
