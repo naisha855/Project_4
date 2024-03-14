@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 연습</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 250px;
+            float: left;
+            background-color: gold;
+            text-align: center;
+        }
+    
+        .box p {
+            font-size: 11px;
+        }
+    </style>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>도서 API</h1>
+    <div class="box"></div>
+
+    
+    <script>
+
+        $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "미움받을 용기" },
+                headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+            })
+                .done(function (msg) {
+                    console.log(msg.documents[0].title);
+                    console.log(msg.documents[0].thumbnail);
+
+
+                    $(".box").append("<img src='" + msg.documents[0].thumbnail + "'/>");
+                    $(".box").append("<h3>" + msg.documents[0].title + "</h3>");
+                    $(".box").append("<h6>" + msg.documents[0].authors[0] + "</h6>");
+                    $(".box").append("<p>" + msg.documents[0].contents + "</p>");
+
+                });
+
+    </script>
+</body>
+</html>

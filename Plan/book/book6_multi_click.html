@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>api 연습</title>
+  
+  <style>
+   /*reset*/
+   * {font-family: "맑은 고딕"; box-sizing: border-box; box-sizing:border-box;}
+   ul,ol,li {list-style:none; margin:0; padding:0; }
+
+   .box {width:300px; height:450px; float:left; text-align:center; margin:20px; padding:15px  30px; border-radius:4px; border:1px solid #ddd; box-shadow:4px 4px 4px #eee;}   
+   .box p {font-size:11px; color:#666; text-align:left;} 
+   .box > h3 > a {text-decoration: none; color:#333;}
+   .box > h3 > a:hover {text-decoration: underline;}
+   .box > p > a {color:#666; text-decoration: none;}
+   .box > p > a:hover {color:#666; text-decoration: underline;}
+
+   .btn {display: inline-block;  padding: 2px 10px;  border: solid 3px currentColor; border-radius: 6px; background-color: #A7A37E; background-color: #A7A37E; color: #fff; font-size: 10px; text-decoration: none;}
+   .btn a:hover {text-decoration: none;}
+
+   header {width:1400px; height:150px; margin:0 auto;  border:1px solid #eee; border-radius:30px;  padding:10px; }   
+
+   section {width:1400px; height:1500px;  margin:30px auto 0 auto; border:1px solid #eee; border-radius:30px;  padding:10px; position:relative; }   
+   section h3 {padding:30px 0 0 20px;}
+
+   footer {width:1400px; height:80px; margin:0 auto; border:1px solid #eee; border-radius:30px;  }
+   footer p {text-align:center; font-size:11px; color:#666; margin:30px 0 0 0px;}
+
+   /*목록*/
+   h4 { width:100%; text-align:center; }
+
+   #booklist {position:absolute; top:150px; right:450px;}
+
+   #booklist ul { font-size:15px;  }
+   #booklist li {text-align:center; border-left:1px solid #ddd;   border-top:1px solid #ddd;  border-bottom:1px solid #ddd; float:left; line-height:45px; cursor:pointer; padding:5px 50px;}
+   #booklist li:last-child {  border-right:1px solid #ddd;}
+
+   article {padding:100px 0 0 0px;}
+
+   #titlelist {margin:100px 0 0 0px; text-align:center; font-size:20px;} 
+
+   #list_a {display:block;}
+   #list_b {display:none;}
+   #list_c {display:none;}
+
+ </style>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>도서 API</h1>
+  </header>
+
+
+  <section>
+    <h3>관련 도서</h3>
+
+    <h4>추천 도서</h4>
+
+    <ul id="booklist">
+      <li>문학/인문</li>
+      <li>유아/아동</li>
+      <li>경제/교양</li>
+    </ul>
+
+
+    <h6 id="titlelist">문학/인문</h6>
+
+    <article id="list_a" class="list">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </article>
+
+    <article id="list_b" class="list">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </article>
+
+
+    <article id="list_c" class="list">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </article>
+
+  </section>
+
+
+  <footer>
+    <p>Copyright ⓒ INTERPARK Corporation All rights reserved.
+    <p>
+  </footer>
+
+
+
+  <script>
+    $.ajax({
+      method: "GET",
+      url: "https://dapi.kakao.com/v3/search/book?target=title",
+      data: { query: "파리" },
+      headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+    })
+      .done(function (msg) {
+
+        const boxs = $('#list_a .box');
+
+        for (let i = 0; i < boxs.length; i++) {
+
+          $("#list_a >.box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+          $("#list_a >.box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+          $("#list_a >.box").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
+
+
+          let str = msg.documents[i].contents;
+          let str2 = str.substring(0, 60);
+
+          $("#list_a >.box").eq(i).append("<p>" + '<a href="sub2.html">' + str2 + "</a>" + "</p>");
+          $("#list_a >.box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
+
+        }
+
+      });
+
+
+    $.ajax({
+      method: "GET",
+      url: "https://dapi.kakao.com/v3/search/book?target=title",
+      data: { query: "유아" },
+      headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+    })
+      .done(function (msg) {
+
+        // for문 (8개)
+        const boxs = $('#list_b .box');
+
+
+        for (let i = 0; i < boxs.length; i++) {
+
+          $("#list_b >.box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+          $("#list_b >.box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+          $("#list_b >.box").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
+
+
+          let str = msg.documents[i].contents;
+          let str2 = str.substring(0, 60);
+
+          $("#list_b >.box").eq(i).append("<p>" + '<a href="sub2.html">' + str2 + "</a>" + "</p>");
+          $("#list_b >.box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
+
+        }
+      });
+
+
+    $.ajax({
+      method: "GET",
+      url: "https://dapi.kakao.com/v3/search/book?target=title",
+      data: { query: "경제" },
+      headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+    })
+      .done(function (msg) {
+
+        // for문 (8개)
+        const boxs = $('#list_b .box');
+
+
+        for (let i = 0; i < boxs.length; i++) {
+
+          $("#list_c >.box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+          $("#list_c >.box").eq(i).append("<h3>" + '<a href="sub2.html">' + msg.documents[i].title + "</a>" + "</h3>");
+          $("#list_c >.box").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
+
+
+          let str = msg.documents[i].contents;
+          let str2 = str.substring(0, 60);
+
+          $("#list_c >.box").eq(i).append("<p>" + '<a href="sub2.html">' + str2 + "</a>" + "</p>");
+          $("#list_c >.box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
+
+        }
+
+      });
+
+
+  </script>
+
+
+  <script>
+
+    $(function () {
+
+      //multipage
+      $('#booklist li').click(function () {
+        let i = $(this).index();
+
+        $('.list').eq(i).show().siblings('.list').hide();
+      });
+      
+
+      // title 
+      $("#booklist li").click(function () {
+        $("#titlelist").text($(this).text());
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
+
+

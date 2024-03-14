@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>API 연습</title>
+  
+  <style>
+    * {box-sizing:border-box; background-color:white; margin:0;}
+
+    #new {width:1400px; height: 1100px; padding: 30px 0px; border: 2px solid red;}
+    .box {width:300px; height:450px; float:left; text-align:center; margin:20px; padding:15px  30px; border-radius:4px; border:1px solid #ddd; box-shadow:4px 4px 4px #eee;}   
+    .box p {font-size:11px; color:#666; text-align:left; margin: 30px 0 0 0px;} 
+    .box > h3 > a {text-decoration: none; color:#333;}
+    .box > h3 > a:hover {text-decoration: underline;}
+    .box > p > a {color:#666; text-decoration: none; }
+    .box > p > a:hover {color:#666; text-decoration: underline;}
+
+    .btn {display: inline-block;  padding: 2px 10px;  border: solid 3px currentColor; border-radius: 6px; background-color: #A7A37E; background-color: #A7A37E; color: #fff; font-size: 10px; text-decoration: none;}
+    .btn a:hover {text-decoration: none;}
+
+    header {width:1400px; height:150px; margin:0 auto;  border:1px solid #eee; border-radius:30px;  padding:10px; }   
+
+    section {width:1400px; height:1100px;  margin:30px auto 0 auto; border:1px solid #eee; border-radius:30px;  padding:10px; position:relative;}   
+    section h3 {padding:30px 0 0 20px;}
+
+    footer {width:1400px; height:80px; margin:0 auto; border:1px solid #eee; border-radius:30px;  }
+    footer p {text-align:center; font-size:11px; color:#666; margin:30px 0 0 0px;}
+
+
+    /*select*/
+    /* div:not(:first-child) { display: none; }*/
+    select { cursor:pointer; width:200px; position:absolute; top:30px; right:50px;}
+    
+  </style>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>도서 API</h1>
+  </header>
+
+  <section>
+
+    <h3>관련 도서</h3>
+
+    <!--select-->
+    <select name="" id="book">
+      <option value="a" selected></option>
+      <option value="b"></option>
+      <option value="c"></option>
+      <option value="d"></option>
+      <option value="e"></option>
+      <option value="f"></option>
+      <option value="g"></option>
+      <option value="l"></option>
+    </select>
+
+    <div id="new">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>Copyright ⓒ INTERPARK Corporation All rights reserved.
+    <p>
+  </footer>
+
+
+  <script>
+    $.ajax({
+      method: "GET",
+      url: "https://dapi.kakao.com/v3/search/book?target=title",
+      data: { query: "고양이", size: 50 },
+      headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+    })
+      .done(function (msg) {
+
+
+        // for문 (8개)
+        const boxs = $('.box');
+
+
+        for (let i = 0; i < boxs.length; i++) {
+
+          $(".box").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+          $(".box").eq(i).append("<h3>" + '<a href="sub_book13.html">' + msg.documents[i].title + "</a>" + "</h3>");
+
+
+          $(".box").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
+
+
+          //선택한 select option 값 title로 가져오기 
+          let booktitle = msg.documents[i].title;
+          $('#book>option').eq(i).text(booktitle);
+
+
+          let str = msg.documents[i].contents;
+          let str2 = str.substring(0, 60);
+
+          $(".box").eq(i).append("<p>" + '<a href="sub_book13.html">' + str2 + "</a>" + "</p>");
+          $(".box").eq(i).append('<a href="#" class="btn">' + "click" + "</a>");
+
+        }
+
+      });
+
+
+
+    //select 
+    const $div = $('#new>div');
+    const $select = $("select");
+
+    $select.change(function () {
+      let index = $("option:selected").index();
+      $div.css('display', 'none');
+      $div.eq(index).css('display', 'block');
+
+    });
+
+  </script>
+
+</body>
+</html>
+
+

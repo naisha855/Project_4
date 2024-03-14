@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 연습</title>
+
+    <style>
+        * {box-sizing:border-box;}
+        .box_wrap {width: 1300px; height: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;}
+        .box_wrap h3 {width: 100%;}
+        .box {width:300px; height:450px; text-align:center; padding:15px  30px; border-radius:4px; border:1px solid #ddd; box-shadow:4px 4px 4px #eee;}   
+        .box p {font-size:11px; color:#666; text-align:left;} 
+    </style>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>도서 API</h1>
+
+    
+
+
+    <script>
+
+        let search;
+        search = ["박경리", "기욤뮈소", "박완서"];
+
+        for (let i = 0; i < search.length; i++) {
+
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: search[i] },
+                async: false,
+                headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+            })
+                .done(function (msg) {
+
+                    console.log(msg);
+          
+                    // for문 (8개)
+                    // let divs = $('.box' + i);
+                    $('body').append('<div class="box_wrap"><h3>'+search[i]+'</h3></div>');    
+
+                    for (let j = 0; j < 8; j++) {
+                        $('.box_wrap').eq(i).append('<div class="box'+ i +' box"></div>');
+
+                        $('.box' + i).eq(j).append("<img src='" + msg.documents[j].thumbnail + "'/>");
+                        $('.box' + i).eq(j).append("<h3>" + msg.documents[j].title + "</h3>");
+                        $('.box' + i).eq(j).append("<h6>" + msg.documents[j].authors + "</h6>");
+
+
+                        let str = msg.documents[j].contents;
+                        let str2 = str.substring(0, 60);
+
+                        $('.box' + i).eq(j).append("<p>" + str2 + "</p>");
+                        $('.box' + i).eq(j).append("<button>" + "click" + "</button>");
+
+                    }
+
+
+
+                });
+
+        }
+    </script>
+</body>
+</html>

@@ -14,12 +14,6 @@ https://www.bookoa.co.kr/
 
 보이는 수정 사항
 
-- oul none하기
-
--section간 간격 정리
-
-- section1 오른쪽 정리
-
 - section1 효과 안준 것 같은 네모 그림자?
 
 - section 3에 추가 텍스트? 여유있으면 정리

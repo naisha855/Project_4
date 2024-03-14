@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  
+
+    <style>
+
+*{box-sizing:border-box;}
+.box_wrap{width:1300px; height: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.box_wrap h3{width:100%;}
+.box{width:300px; height: 450px; text-align:center; padding: }
+      </style>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body>
+
+
+
+<script>
+
+let search;
+search = ["박경리", "기욤뮈소", "박완서"];
+
+for(let i=0; i<search.length; i++){
+    $.ajax({
+        method: "GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data: {query: search[i]},
+        async: false,
+        headers:{Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161"}
+    })
+.done(function(msg){
+    console.log(msg);
+
+    const divs = $('.box' +i);
+
+    for (let j=0; j<divs.length; j++){
+        $('.box'+i).eq(j).append("<img src='" + msg.documents[j].thumbnail + "'/>");
+        $('.box' + i).eq(j).append("<h3>" + msg.documents[j].title+"</h3>");
+        $('.box' + i).eq(j).append("<h6>" msg.documents[j].authors + "</h6>");
+
+        let str = msg.documents[j].contents;
+        let str2 = str.substring(0, 60);
+        
+
+        $('.box'+i).eq(j).append("<p>" + str2 + "</p>");
+        $('.box'+i).eq(j).append("<button>"+"click" + "</button>");
+        
+    }
+});
+}
+
+</script>
+
+</body>
+
+</html>

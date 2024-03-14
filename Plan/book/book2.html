@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 연습</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    
+        .box {
+            width: 250px;
+            height: 400px;
+            float: left;
+            text-align: center;
+            margin: 20px;
+            padding: 15px 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-shadow: 4px 4px 4px #eee;
+        }
+    
+        .box p {
+            font-size: 11px;
+            color: #666;
+            text-align: left;
+        }
+    </style>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>도서 API</h1>
+
+    <div class="box"></div>
+    
+    <div class="box"></div>
+    
+    <div class="box"></div>
+    
+    <div class="box"></div>
+    
+    <div class="box"></div>
+    
+    <div class="box"></div>
+    
+    <div class="box"></div>
+    
+    <div class="box"></div>
+
+    
+    <script>
+
+        $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "미움받을 용기" },
+                headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+            })
+                .done(function (msg) {
+
+                    $(".box").append("<img src='" + msg.documents[0].thumbnail + "'/>");
+                    $(".box").append("<h3>" + msg.documents[0].title + "</h3>");
+                    $(".box").append("<h6>" + msg.documents[0].authors[0] + "</h6>");
+
+                    let str = msg.documents[0].contents;
+                    let str2 = str.substring(0, 60);
+
+                    $(".box").append("<p>" + str2 + "</p>");
+
+                    $(".box").append("<button>" + "click" + "</button>");
+
+                });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 연습</title>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>도서 API</h1>
+    
+    <script>
+
+        $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "자바스크립트", size: 50 },
+                headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+            })
+                .done(function (msg) {
+                    console.log(msg);
+                });
+
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "강아지", size: 50 },
+                headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+            })
+                .done(function (msg) {
+                    console.log(msg);
+                });
+
+    </script>
+</body>
+</html>

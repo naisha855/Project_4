@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 연습</title>
+
+    <style>
+        * {box-sizing:border-box;}
+       .box {width:300px; height:450px; float:left; text-align:center; margin:20px; padding:15px  30px; border-radius:4px; border:1px solid #ddd; box-shadow:4px 4px 4px #eee;}   
+       .box p {font-size:11px; color:#666; text-align:left;} 
+    </style>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>도서 API</h1>
+
+    <div class="box"></div>
+    
+    <div class="box"></div>
+    
+    <div class="box"></div>
+    
+    <div class="box"></div>
+    
+    <div class="box"></div>
+    
+    <div class="box"></div>
+    
+    <div class="box"></div>
+    
+    <div class="box"></div>
+
+    
+    <script>
+
+        $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "미움받을 용기" },
+                headers: { Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161" }
+            })
+                .done(function (msg) {
+
+                    let str, str2;
+                    // 1
+
+                    $(".box:nth-of-type(1)").append("<img src='" + msg.documents[0].thumbnail + "'/>");
+                    $(".box:nth-of-type(1)").append("<h3>" + msg.documents[0].title + "</h3>");
+                    $(".box:nth-of-type(1)").append("<h6>" + msg.documents[0].authors[0] + "</h6>");
+
+                    str = msg.documents[0].contents;
+                    str2 = str.substring(0, 60);
+
+                    $(".box:nth-of-type(1)").append("<p>" + str2 + "</p>");
+
+                    $(".box:nth-of-type(1)").append("<button>" + "click" + "</button>");
+
+
+
+
+                    // 2
+
+                    $(".box:nth-of-type(2)").append("<img src='" + msg.documents[1].thumbnail + "'/>");
+                    $(".box:nth-of-type(2)").append("<h3>" + msg.documents[1].title + "</h3>");
+                    $(".box:nth-of-type(2)").append("<h6>" + msg.documents[1].authors[0] + "</h6>");
+
+                    str = msg.documents[1].contents;
+                    str2 = str.substring(0, 60);
+
+                    $(".box:nth-of-type(2)").append("<p>" + str2 + "</p>");
+
+                    $(".box:nth-of-type(2)").append("<button>" + "click" + "</button>");
+
+
+
+
+
+                    // 3
+
+                    $(".box:nth-of-type(3)").append("<img src='" + msg.documents[8].thumbnail + "'/>");
+                    $(".box:nth-of-type(3)").append("<h3>" + msg.documents[8].title + "</h3>");
+                    $(".box:nth-of-type(3)").append("<h6>" + msg.documents[8].authors[0] + "</h6>");
+
+                    str = msg.documents[8].contents;
+                    str2 = str.substring(0, 60);
+
+                    $(".box:nth-of-type(3)").append("<p>" + str2 + "</p>");
+
+                    $(".box:nth-of-type(3)").append("<button>" + "click" + "</button>");
+
+
+
+
+
+                    // 4
+
+                    $(".box:nth-of-type(4)").append("<img src='" + msg.documents[3].thumbnail + "'/>");
+                    $(".box:nth-of-type(4)").append("<h3>" + msg.documents[3].title + "</h3>");
+                    $(".box:nth-of-type(4)").append("<h6>" + msg.documents[3].authors[0] + "</h6>");
+
+                    str = msg.documents[3].contents;
+                    str2 = str.substring(0, 60);
+
+                    $(".box:nth-of-type(4)").append("<p>" + str2 + "</p>");
+
+                    $(".box:nth-of-type(4)").append("<button>" + "click" + "</button>");
+
+
+
+
+
+                    // 5
+
+                    $(".box:nth-of-type(5)").append("<img src='" + msg.documents[4].thumbnail + "'/>");
+                    $(".box:nth-of-type(5)").append("<h3>" + msg.documents[4].title + "</h3>");
+                    $(".box:nth-of-type(5)").append("<h6>" + msg.documents[4].authors[0] + "</h6>");
+
+                    str = msg.documents[4].contents;
+                    str2 = str.substring(0, 60);
+
+                    $(".box:nth-of-type(5)").append("<p>" + str2 + "</p>");
+
+                    $(".box:nth-of-type(5)").append("<button>" + "click" + "</button>");
+
+
+
+
+
+                    // 6
+
+                    $(".box:nth-of-type(6)").append("<img src='" + msg.documents[5].thumbnail + "'/>");
+                    $(".box:nth-of-type(6)").append("<h3>" + msg.documents[5].title + "</h3>");
+                    $(".box:nth-of-type(6)").append("<h6>" + msg.documents[5].authors[0] + "</h6>");
+
+                    str = msg.documents[5].contents;
+                    str2 = str.substring(0, 60);
+
+                    $(".box:nth-of-type(6)").append("<p>" + str2 + "</p>");
+
+                    $(".box:nth-of-type(6)").append("<button>" + "click" + "</button>");
+
+
+
+
+
+                    // 7
+
+                    $(".box:nth-of-type(7)").append("<img src='" + msg.documents[6].thumbnail + "'/>");
+                    $(".box:nth-of-type(7)").append("<h3>" + msg.documents[6].title + "</h3>");
+                    $(".box:nth-of-type(7)").append("<h6>" + msg.documents[6].authors[0] + "</h6>");
+
+                    str = msg.documents[6].contents;
+                    str2 = str.substring(0, 60);
+
+                    $(".box:nth-of-type(7)").append("<p>" + str2 + "</p>");
+
+                    $(".box:nth-of-type(7)").append("<button>" + "click" + "</button>");
+
+
+
+
+                    // 8
+
+                    $(".box:nth-of-type(8)").append("<img src='" + msg.documents[7].thumbnail + "'/>");
+                    $(".box:nth-of-type(8)").append("<h3>" + msg.documents[7].title + "</h3>");
+                    $(".box:nth-of-type(8)").append("<h6>" + msg.documents[7].authors[0] + "</h6>");
+
+                    str = msg.documents[7].contents;
+                    str2 = str.substring(0, 60);
+
+                    $(".box:nth-of-type(8)").append("<p>" + str2 + "</p>");
+
+                    $(".box:nth-of-type(8)").append("<button>" + "click" + "</button>");
+
+                });
+
+    </script>
+</body>
+</html>
