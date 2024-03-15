@@ -1,18 +1,31 @@
+html {
+  background-color: #f6f6f6;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
 /* header */
 header {
   width: 100%;
   height: 106px;
-  background-color: red;
+  background-color: white;
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  z-index: 99;
 }
 
 .container {
   display: flex;
   width: 80%;
+  justify-content: center;
+  align-items: center;
 }
 
 .container_menu {
@@ -20,17 +33,30 @@ header {
   height: 106px;
   position: relative;
   padding: 0;
-  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_menu img {
+  width: 20px;
+  height: 20px;
 }
 
 .container_logo {
   width: 167px;
   height: 106px;
-  background-color: green;
+  display: flex;
+  align-items: center;
+}
+
+.container_logo img {
+  width: 100%;
+  height: 50%;
 }
 
 .container_product-search {
-  width: 60%;
+  width: 1170px;
   height: 106px;
   background-color: blue;
 }
@@ -39,53 +65,68 @@ header {
   width: 85px;
   height: 106px;
   background-color: violet;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .container_menu-cart {
   widtH: 98px;
   height: 106px;
-  background-color: gray;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: "open sans";
+}
+
+.container_menu-cart button {
+  border: none;
+  width: 58px;
+  height: 29px;
+  color: #003c85;
+  font-size: 16px;
+  background-color: transparent;
 }
 
 footer {
   width: 1900px;
   height: 450px;
-  background-color: gray;
   padding: 70px 0;
 }
 
 .footer_widget-area {
   width: 1900px;
   height: 100%;
-  background-color: white;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .footer_widget-area_container {
   width: 1600px;
   height: 100%;
-  background-color: darkgray;
   display: flex;
 }
 
 .grid_item {
   width: 534px;
   height: 311px;
-  background-color: skyblue;
   padding: 15px;
 }
 
 .contact_info {
   width: 100%;
   height: 100%;
-  background-color: white;
 }
 
 .contact_info h3 {
   width: 100%;
   height: 32px;
-  background-color: red;
+  font-family: Playfair Display;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 1.5em;
 }
 
 .contact_info p {
@@ -101,29 +142,37 @@ footer {
 .contact_info span {
   width: 100%;
   height: 30px;
-  background-color: yellow;
+  font-size: 1.5em;
+}
+
+.contact_info span a {
+  color: #003c85;
 }
 
 .social_network {
   width: 100%;
   height: 100%;
-  background-color: white;
 }
 
 .social_network h3 {
   width: 100%;
   height: 32px;
-  background-color: red;
+  font-family: Playfair Display;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 1.5em;
 }
 
 .social_network p {
   width: 100%;
   height: 28px;
-  background-color: orange;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .social-links_medium_rounded {
@@ -135,19 +184,20 @@ footer {
 .subscribe-form {
   width: 100%;
   height: 100%;
-  background-color: white;
 }
 
 .subscribe-form h3 {
   width: 100%;
   height: 32px;
-  background-color: red;
+  font-family: Playfair Display;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 1.5em;
 }
 
 .subscribe-form p {
   width: 100%;
   height: 29px;
-  background-color: orange;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
@@ -157,8 +207,19 @@ footer {
 .form-fields {
   width: 483px;
   height: 44px;
-  background-color: yellow;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid #bdbdbd;
+  border-radius: 50px;
+  padding: 8px 20px;
+}
+
+.form-fields p {
+  width: 40%;
+  height: 30px;
+  background-color: orange;
 }
 
 .footer_colophon {

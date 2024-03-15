@@ -19,3 +19,5 @@ https://www.bookoa.co.kr/
 - section 3에 추가 텍스트? 여유있으면 정리
 
 - section7에 span sns 태그
+
+- 구글 font 밖에 ; 줘도 되나?

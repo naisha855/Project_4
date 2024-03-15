@@ -9,6 +9,5 @@ ol, ul, li {
 }
 
 a {
-  -webkit-text-decoration: 0;
-          text-decoration: 0;
+  text-decoration: none;
 }
