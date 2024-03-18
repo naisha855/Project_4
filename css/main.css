@@ -49,7 +49,6 @@ section {
 .section1_main_line {
   width: 100%;
   height: 11px;
-  background-color: blue;
   margin-bottom: 20px;
 }
 
@@ -62,14 +61,16 @@ section {
 .section1_main_name {
   width: 100%;
   height: 116px;
-  background-color: violet;
+  font-size: 58px;
   margin-bottom: 20px;
+  font-family: "Playfair Display";
+  font-weight: 600;
+  line-height: 1;
 }
 
 .section1_main_page {
   width: 100%;
   height: 118px;
-  background-color: yellowgreen;
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
@@ -78,35 +79,49 @@ section {
 .section1_main_page_left {
   width: 50%;
   height: 118px;
-  background-color: red;
-}
-
-.section1_main_page_left_wrappe {
-  width: 238px;
-  height: 50px;
-  background-color: #237AF6;
-  font-size: 18px;
-  font-weight: 500;
-  text-transform: capitalize;
+  padding: 10px;
 }
 
 .section1_main_page_right {
-  width: 50%;
+  width: 40%;
   height: 118px;
-  background-color: blue;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 400;
+  color: #616161;
 }
 
 .section1_main_icon {
   width: 100%;
   height: 104px;
-  background-color: lightsalmon;
   display: flex;
+  margin-top: 100px;
 }
 
 .section1_main_icon_tag {
   width: 33.3%;
   height: 104px;
-  background-color: green;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.section1_main_icon_tag_img {
+  width: 50px;
+  height: 50px;
+}
+
+.section1_main_icon_tag_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.section1_main_icon_tag_text {
+  text-align: center;
+  margin-left: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .section1_main_right_main_title_imgpage {
@@ -147,7 +162,7 @@ section {
 .section2_main_left_line {
   width: 100%;
   height: 11px;
-  background-color: green;
+  text-align: end;
 }
 
 .section2_main_right {
@@ -177,7 +192,7 @@ section {
 .section3_main {
   width: 1416px;
   height: 1650px;
-  background-color: #666;
+  background-color: #939393;
   padding: 30px;
 }
 
@@ -214,7 +229,17 @@ section {
 .section_3_1_main_line {
   width: 65%;
   height: 51px;
-  background-color: greenyellow;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.section_3_1_main_line span {
+  display: inline-block;
+  width: 100%;
+  border-top: 0.1px;
+  border-width: 0.1px;
+  color: #ffffff;
+  border-style: solid;
 }
 
 .section3_main_populater {
@@ -232,7 +257,6 @@ section {
 .section3_main_populater_container_list {
   width: 20%;
   height: 400px;
-  background-color: blue;
   padding: 15px 15px;
 }
 
@@ -248,25 +272,21 @@ section {
 .section3_main_populater_container_list_inner_image {
   width: 100%;
   height: 60%;
-  background-color: skyblue;
 }
 
 .section3_main_populater_container_list_inner_detail {
   width: 100%;
   height: 30%;
-  background-color: purple;
 }
 
 .section3_main_populater_container_list_inner_detail_title {
   width: 100%;
   height: 50%;
-  background-color: #CD40E5;
 }
 
 .section3_main_populater_container_list_inner_detail_price {
   width: 100%;
   height: 40%;
-  background-color: yellowgreen;
 }
 
 .section3_2 {
@@ -293,19 +313,27 @@ section {
 .section3_2_main_line {
   width: 65%;
   height: 51px;
-  background-color: greenyellow;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.section3_2_main_line span {
+  display: inline-block;
+  width: 100%;
+  border-top: 0.1px white;
+  border-width: 0.1px;
+  color: #ffffff;
+  border-style: solid;
 }
 
 .section3_main_subpopulate {
   width: 100%;
   height: 590px;
-  background-color: orange;
 }
 
 .section3_main_subpopulate_container {
   width: 100%;
   height: 590px;
-  background-color: orange;
   display: flex;
 }
 
@@ -348,7 +376,6 @@ section {
   width: 1456px;
   height: 11px;
   margin-bottom: 20px;
-  background-color: aquamarine;
 }
 
 .section4_main_list {
@@ -453,7 +480,6 @@ section {
 .section4_main_default_right_populate_container {
   width: 238px;
   height: 50px;
-  background-color: darkblue;
 }
 
 .section5_main {
@@ -530,8 +556,11 @@ section {
 .section5_main_right_populate_line {
   width: 100%;
   height: 11px;
-  background-color: orangered;
   margin-bottom: 20px;
+}
+
+.section5_main_right_populate_line_container span {
+  background-color: white;
 }
 
 .section5_main_right_populate_text {
@@ -587,14 +616,42 @@ section {
 .section6_default_populate_line {
   width: 100%;
   height: 11px;
-  background-color: darkgrey;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .section6_list_list {
   width: 1456px;
   height: 268px;
-  background-color: darkgreen;
+  padding: 30px;
+}
+
+.section6_list_list_populate {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section6_list_list h4 {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: Sans-serif;
+}
+
+.section6_list_list p {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Open Sans";
+}
+
+.section6_list_list a {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Open Sans";
+  color: #db1037;
 }
 
 .section7 {
@@ -606,14 +663,37 @@ section {
 .section7_populate {
   width: 1140px;
   height: 75px;
-  background-color: aquamarine;
   padding: 10px;
 }
 
 .section7_populate_container {
   width: 100%;
   height: 100%;
-  background-color: white;
+  text-align: center;
+  line-height: 1;
+}
+
+.section7_populate_container span {
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+  border: 1px solid;
+  border-width: 1px;
+  border-color: #e3e3e3;
+  margin: 0 5px;
+}
+
+.section7_populate_container span i {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section7_populate_container span i img {
+  width: 25px;
+  width: 25px;
 }
 
 .section8 {
@@ -643,7 +723,7 @@ section {
 .section8_default_left_populate_title {
   width: 100%;
   height: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   color: #2B2B2B;
   font-family: "Open Sans", Sans-serif;
   font-size: 20px;
@@ -665,14 +745,12 @@ section {
 .section8_default_right {
   width: 50%;
   height: 100%;
-  background-color: skyblue;
   padding: 10px;
 }
 
 .section8_default_right_container {
   width: 100%;
   height: 100%;
-  background-color: green;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -680,6 +758,11 @@ section {
 
 .section8_default_right_container_list {
   width: 100%;
-  height: 10px;
-  background-color: brown;
+  height: 30px;
+  text-align: end;
+  display: inline-block;
+}
+
+.section8_default_right_container_list a {
+  color: #db1037;
 }
