@@ -1,9 +1,11 @@
 $.ajax({
     method: "GET",
-    url: "https://dapi.kakao.com/v3/search/book?target=title",
+    url: "https://iitdda-resources-release.s3.ap-northeast-2.amazonaws.com/book/simbo8864-1710832760383-834",
     data: { query:"미움받을 용기" },
     headers: {Authorization: "KakaoAK 7d38ca298160bac7d36fd3c326771778"}
 })
+
+// url: "https://dapi.kakao.com/v3/search/book?target=title",
     .done(function (msg) {
         console.log(msg);
 
