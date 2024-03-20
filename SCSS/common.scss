@@ -314,15 +314,16 @@ height: 28px;
 }
 
 .form-fields input{
-    height: 30px;
+    width: 340px;
+    height: 44px;
     border: none;
     color: $pointColor;
     padding-right: 20px;
-    position: absolute;
     background-color: transparent;
 }
-.form-fields input:nth-of-type(1){
-width: 340px;
+.form-fields input:nth-of-type(2){
+width: 95px;
+height: 44px;
 }
 .footer_colophon{
     width: 100%;
@@ -380,6 +381,8 @@ padding: 15px 15px;
     padding: 20px;
     font-weight: normal;
     text-align:center;
+    font-size: 16px;
+    line-height: 23px;
 }
 
 // item

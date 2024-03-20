@@ -1,16 +1,49 @@
-$.ajax({
-    method: "GET",
-    url: "https://iitdda-resources-release.s3.ap-northeast-2.amazonaws.com/book/simbo8864-1710832760383-834",
-    data: { query:"미움받을 용기" },
-    headers: {Authorization: "KakaoAK 7d38ca298160bac7d36fd3c326771778"}
+$(function(){
+
+let search = ["바람", "영화", "달콤한", "초록", "보리", "차트",
+ "여행", "음악", "새", "음식"];
+
+for (let i = 0; i < search.length; i++) {
+
+    $.ajax({
+        method: "GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data: { query: search[i] },
+        async: false,
+        headers: { Authorization: "KakaoAK 7d38ca298160bac7d36fd3c326771778" }
+    })
+
+        .done(function (msg) {
+            $(".section3_main_populater_container_list").eq(i).find('figure>a').append("<img src='" + msg.documents[i].thumbnail + "'/>");
+            $(".section3_main_populater_container_list").eq(i).find('h3').append("<a href=''>" + msg.documents[i].title + "</a>");
+            $(".section3_main_populater_container_list").eq(i).find('.section3_main_populater_container_list_inner_detail_price').append("<span>" + msg.documents[i].price + "</span>");
+
+        });
+}
+
+let search2 = ["폭풍의 언덕", "죄와 벌", "데미안", "트로이", "변신"];
+
+for (let j = 0; j < search2.length;j++) {
+
+    $.ajax({
+        method: "GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data: { query: search2[j] },
+        async: false, 
+        headers: { Authorization: "KakaoAK 7d38ca298160bac7d36fd3c326771778" }
+    })
+
+
+
+        .done(function (msg) {
+            console.log(msg)
+            $(".section3_main_subpopulate .section3_main_populater_container_list").eq(j).find('figure>a').append("<img src='" + msg.documents[j].thumbnail + "'/>");
+            $(".section3_main_subpopulate .section3_main_populater_container_list").eq(j).find('h3').append("<a href=''>" + msg.documents[j].title + "</a>");
+            $(".section3_main_subpopulate .section3_main_populater_container_list").eq(j).find('.section3_main_populater_container_list_inner_detail_price').append("<span>" + msg.documents[j].price + "</span>");
+
+            let str = msg.documents[j].title;
+            let str2 = str.substring(0, 2)
+
+        });
+}
 })
-
-// url: "https://dapi.kakao.com/v3/search/book?target=title",
-    .done(function (msg) {
-        console.log(msg);
-
-        let lists= $(".section3_main_populater_container_list").children('div');
-        console.log(lists)
-
-        $(".section3_main_populater_container_list_inner").append("<img src='"+msg.documents[0].thumbnail+"'/>");
-    });
