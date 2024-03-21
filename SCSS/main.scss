@@ -3,6 +3,8 @@
 $mainColor: #237AF6;
 $subColor: #003c85;
 $pointColor: #db1037;
+$textColor: #616161;
+$WhiteColor: #ffffff;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
@@ -53,10 +55,10 @@ section {
     width: 100%;
     height: 20px;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 600;
-    color: #2B2B2B;
-    font-family: "Open Sans", Sans-serif;
+    color: $subColor;
+    font-family: 'SUIT-Regular';
 }
 
 .section1_main_line {
@@ -102,10 +104,12 @@ line-height: 1;
 .section1_main_page_right {
     width: 40%;
     height: 118px;
-font-family: "Open Sans";
-font-size: 15px;
-font-weight: 400;
-color: #616161;
+    font-family: 'SUIT-Regular';
+font-size: 16px;
+font-weight: 10;
+color: $textColor;
+letter-spacing: 1px;
+line-height: 22px;
 }
 
 .section1_main_icon {
@@ -132,9 +136,10 @@ color: #616161;
 .section1_main_icon_tag_text{
     text-align: center;
     margin-left: 20px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 18px;
-    font-weight: 600;
+    font-family: 'SUIT-Regular';
+    font-size: 22px;
+    font-weight: 800;
+    color: $textColor;
 }
 
 .section1_main_right_bg{
@@ -179,7 +184,7 @@ color: #616161;
     text-align: right;
     font-size: 38px;
     font-weight: 600;
-    color: #2b2b2b;
+    color: $subColor;
     font-family: 'Playfair Display';
     line-height: 50px;
     padding: 40px 0;
@@ -205,8 +210,12 @@ color: #616161;
 }
 
 .section2_main_right_populater_container {
+    font-family: 'SUIT-Regular';
     width: 503px;
     height: 81px;
+    line-height: 25px;
+    font-weight: 600;
+    color: $textColor;
 }
 
 // section3
@@ -220,8 +229,21 @@ color: #616161;
 .section3_main {
     width: 1416px;
     height: 1650px;
-    background-color: #939393;
     padding: 30px;
+}
+
+.section3_main_image{
+ width:1416px;
+ height: 100%;
+ position: absolute;
+ z-index: -10;
+}
+
+.section3_main_image img{
+    width:100%;
+    height: 1500px;
+    position: absolute;
+    opacity: 50%;
 }
 
 .section3_main_populater {
@@ -251,7 +273,7 @@ color: #616161;
     font-family: 'Playfair Display';
     font-size: 20px;
     font-weight: 600;
-    color: #2B2B2B;
+    color: $subColor;
 }
 
 .section_3_1_main_line {
@@ -266,7 +288,7 @@ color: #616161;
     width: 100%;
     border-top:0.1px; 
     border-width: 0.1px;
-    color:#ffffff;
+    color:$WhiteColor;
     border-style: solid;
 }
 
@@ -317,15 +339,24 @@ color: #616161;
 .section3_main_populater_container_list_inner_detail_title {
     width: 100%;
     height: 50%;
-    font-size: 12px;
-    color: #2b2b2b;
+    font-size: 16px;
+    font-family: 'SUIT-Regular';
+    font-weight: 800;
+    line-height: 15px;
+}
+
+.section3_main_populater_container_list_inner_detail_title a{
+    color: $subColor;
 }
 
 .section3_main_populater_container_list_inner_detail_price {
     width: 100%;
     height: 40%;
     font-size: 16px;
+    font-family: 'SUIT-Regular';
     color: $pointColor;
+    font-size: 18px;
+    font-weight: 800;
 }
 
 .section3_2 {
@@ -361,7 +392,7 @@ color: #616161;
     width: 100%;
     border-top:0.1px white; 
     border-width: 0.1px;
-    color:#ffffff;
+    color: $WhiteColor;
     border-style: solid;
 }
 
@@ -402,7 +433,7 @@ color: #616161;
     width: 1456px;
     height: 58px;
     margin-bottom: 20px;
-    color: #2B2B2B;
+    color: $subColor;
     font-family: "Playfair Display", Sans-serif;
     font-size: 32px;
     font-weight: 600;
@@ -462,13 +493,18 @@ color: #616161;
 .section4_main_list_container_list_populate_text_container {
     width: 100%;
     height: 81px;
+    font-family: 'SUIT-Regular';
+    font-size: 16px;
+    line-height: 23px;
+    color: $textColor;
 }
 
 .section4_main_list_container_list_populate_number_container h2 {
-    color: #444444;
-    font-family: "Open Sans", Sans-serif;
+    color: $subColor;
+    font-family: 'SUIT-Regular';
     font-size: 16px;
     font-weight: 600;
+
 }
 
 .section4_main_default {
@@ -495,19 +531,27 @@ color: #616161;
     width: 100%;
     height: 20px;
     color: #2B2B2B;
-    font-family: "Open Sans", Sans-serif;
-    font-size: 12px;
+    font-family: 'SUIT-Regular';
+    font-size: 16px;
     font-weight: 600;
 }
 
 .section4_main_default_left_populate_email {
     width: 100%;
     height: 28px;
-    font-family: "Open Sans", Sans-serif;
+    font-family: 'SUIT-Regular';
     font-size: 16px;
     font-weight: 500;
 }
 
+.section4_main_default_left_populate_email a{
+    color: $textColor;
+}
+
+.section4_main_default_left_populate_email a:hover{
+    color:$pointColor;
+    transition: 0.5s;
+}
 
 .section4_main_default_right {
     width: 50%;
@@ -527,6 +571,9 @@ color: #616161;
     width: 238px;
     height: 50px;
 }
+
+
+
 
 // section_5
 
@@ -564,7 +611,6 @@ color: #616161;
 .section5_main_left_populate_container {
     width: 440px;
     height: 660px;
-    background-color: #ED2874;
 }
 
 .section5_main_right {
@@ -585,8 +631,8 @@ color: #616161;
     width: 100%;
     height: 20px;
     margin-bottom: 20px;
-    color: #FFFFFFE8;
-    font-family: "Open Sans", Sans-serif;
+    color: $WhiteColor;
+    font-family: 'SUIT-Regular';
     font-size: 30px;
     font-weight: 600;
 }
@@ -594,11 +640,12 @@ color: #616161;
 .section5_main_right_populate_name {
     width: 100%;
     height: 58px;
-    color: #FFFFFF;
-    font-family: "Playfair Display", Sans-serif;
+    color: $WhiteColor;
+    font-family: 'SUIT-Regular';
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 20px;
+    letter-spacing: 3px;
 }
 
 .section5_main_right_populate_line {
@@ -608,28 +655,34 @@ color: #616161;
 }
 
 .section5_main_right_populate_line_container span{
-background-color: white;
+background-color: $WhiteColor;
 }
 
 .section5_main_right_populate_text {
     width: 100%;
     height: 91px;
     margin-bottom: 20px;
-    color: #FFFFFFE8;
-    font-family: "Open Sans", Sans-serif;
+    color: $WhiteColor;
+    font-family: 'SUIT-Regular';
     font-size: 20px;
     font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 30px;
 }
 
 .section5_main_right_populate_link {
     width: 100%;
     height: 29px;
+}
 
+.section5_main_right_populate_link a:hover {
+transition: 0.5s;
+color: $pointColor;
 }
 
 .section5_main_right_populate_link_container a {
-    color: #FFFFFFE8;
-    font-family: "Open Sans", Sans-serif;
+    color: $WhiteColor;
+    font-family: 'SUIT-Regular';
     font-size: 20px;
     font-weight: 500;
 }
@@ -657,7 +710,7 @@ background-color: white;
     width: 100%;
     height: 58px;
     margin-bottom: 20px;
-    color: #2B2B2B;
+    color: $subColor;
     font-family: "Playfair Display", Sans-serif;
     font-size: 48px;
     font-weight: 600;
@@ -687,23 +740,35 @@ flex-direction: column;
     justify-content: space-between;
 }
 
+.section6_list_list_populate a:hover{
+    color:$mainColor;
+    transition: 0.5s;
+}
+
 .section6_list_list h4{
 font-size: 28px;
 font-weight: 600;
-font-family: Sans-serif;
+font-family: 'SUIT-Regular';
+letter-spacing: 3px;
+color: $subColor;
 }
 
 .section6_list_list p{
     font-size: 15px;
     font-weight: 400;
-    font-family: "Open Sans";
+    font-family: 'SUIT-Regular';
+    color: $textColor;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 25px;
     }
 
     .section6_list_list a{
         font-size: 16px;
-        font-weight: 500;
-        font-family: "Open Sans";
+        font-weight: 800;
+        font-family: 'SUIT-Regular';
         color: $pointColor;
+        letter-spacing: 2px;
         }
 
 // section7
@@ -782,8 +847,8 @@ font-family: Sans-serif;
     width: 100%;
     height: 20px;
     margin-bottom: 50px;
-    color: #2B2B2B;
-    font-family: "Open Sans", Sans-serif;
+    color: $subColor;
+    font-family: 'SUIT-Regular';
     font-size: 20px;
     font-weight: 600;
 }
@@ -794,7 +859,7 @@ font-family: Sans-serif;
 }
 
 .section8_default_left_populate_email a {
-    font-family: "Open Sans", Sans-serif;
+    font-family: 'SUIT-Regular';
     font-size: 16px;
     font-weight: 500;
     color: #939393
@@ -822,5 +887,6 @@ font-family: Sans-serif;
 }
 
 .section8_default_right_container_list a{
+    font-family: 'SUIT-Regular';
     color: $pointColor;
 }

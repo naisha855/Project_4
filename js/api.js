@@ -1,7 +1,7 @@
 $(function(){
 
 let search = ["바람", "영화", "달콤한", "초록", "보리", "차트",
- "여행", "음악", "새", "음식"];
+ "여행", "노랑", "새", "음식"];
 
 for (let i = 0; i < search.length; i++) {
 
@@ -21,7 +21,7 @@ for (let i = 0; i < search.length; i++) {
         });
 }
 
-let search2 = ["폭풍의 언덕", "죄와 벌", "데미안", "트로이", "변신"];
+let search2 = ["과학", "죄와 벌", "삶", "동화", "기원"];
 
 for (let j = 0; j < search2.length;j++) {
 

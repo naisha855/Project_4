@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "SUIT-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   background-color: #f6f6f6;
 }
@@ -74,6 +80,7 @@ header {
   margin-bottom: 0;
   align-items: center;
   -moz-box-align: center;
+  font-family: "SUIT-Regular";
 }
 
 .ontainer_product-search_category {
@@ -124,6 +131,9 @@ header {
   align-items: center;
   text-align: center;
   justify-content: center;
+  color: #003c85;
+  font-family: "SUIT-Regular";
+  font-weight: 800;
 }
 
 .container_menu-cart {
@@ -133,16 +143,17 @@ header {
   align-items: center;
   text-align: center;
   justify-content: center;
-  font-family: "open sans";
 }
 
 .container_menu-cart button {
   border: none;
   width: 58px;
   height: 29px;
-  color: #003c85;
+  color: #237AF6;
   font-size: 16px;
   background-color: transparent;
+  font-family: "SUIT-Regular";
+  font-weight: 800;
 }
 
 footer {
@@ -182,6 +193,7 @@ footer {
   font-weight: 400;
   letter-spacing: 0;
   font-size: 1.5em;
+  color: #db1037;
 }
 
 .contact_info p {
@@ -190,10 +202,12 @@ footer {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-family: Open sans;
+  font-family: "SUIT-Regular";
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0;
+  color: #616161;
+  line-height: 25px;
 }
 
 .contact_info span {
@@ -218,6 +232,7 @@ footer {
   font-weight: 400;
   letter-spacing: 0;
   font-size: 1.5em;
+  color: #db1037;
 }
 
 .social_network p {
@@ -227,19 +242,22 @@ footer {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-family: "Open Sans";
+  font-family: "SUIT-Regular";
   font-size: 16px;
   font-weight: 400;
+  color: #616161;
 }
 
 .social-links_medium_rounded {
   width: 100%;
   height: 48px;
   font-size: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .social-links_medium_rounded span {
-  display: inline-block;
+  display: flex;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -247,11 +265,12 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 0 5px;
 }
 
 .social-links_medium_rounded span img {
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
 }
 
 .subscribe-form {
@@ -266,6 +285,7 @@ footer {
   font-weight: 400;
   letter-spacing: 0;
   font-size: 1.5em;
+  color: #db1037;
 }
 
 .subscribe-form p {
@@ -275,6 +295,7 @@ footer {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  color: #616161;
 }
 
 .form-fields {
@@ -284,7 +305,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 3px solid #bdbdbd;
+  border: 3px solid #616161;
   border-radius: 50px;
   padding: 8px 20px;
   font-family: inherit;
@@ -334,7 +355,7 @@ footer {
 .container_lift {
   width: 50%;
   height: 59px;
-  font-family: open sans;
+  font-family: "SUIT-Regular";
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0;
@@ -346,6 +367,7 @@ footer {
 
 .container_lift span a {
   color: #db1037;
+  font-family: "SUIT-Regular";
 }
 
 .container_right {
@@ -372,19 +394,25 @@ footer {
   text-align: center;
   font-size: 16px;
   line-height: 23px;
+  font-family: "SUIT-Regular";
 }
 
 .start_subscript {
-  font-family: "open sans";
+  font-family: "SUIT-Regular";
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 800;
   text-transform: capitalize;
   background-color: #237AF6;
   border-radius: 0px 0px 0px 0px;
   padding: 16px 32px 16px 32px;
   display: flex;
   justify-content: center;
-  color: #fff;
+  color: #ffffff;
+}
+
+.start_subscript:hover {
+  background-color: #003c85;
+  transition: 0.3s;
 }
 
 .span-line {
