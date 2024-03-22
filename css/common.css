@@ -395,6 +395,7 @@ footer {
   font-size: 16px;
   line-height: 23px;
   font-family: "SUIT-Regular";
+  position: relative;
 }
 
 .start_subscript {

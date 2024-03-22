@@ -13,6 +13,10 @@ https://preview.themeforest.net/item/pustaka-woocommerce-theme-for-book-store/fu
 내용 사이트
 https://www.bookoa.co.kr/
 
+배운 내용사항
+
+https://blog.naver.com/red0808/222403166217
+
 보이는 수정 사항
 
 - section1 효과 안준 것 같은 네모 그림자?
