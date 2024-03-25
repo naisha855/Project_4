@@ -75,6 +75,7 @@ p {
   line-height: 26px;
   font-weight: 500;
   font-family: "SUIT-Regular";
+  color: white;
 }
 
 .Section_1_title_left_list_wrapper {
@@ -115,7 +116,6 @@ p {
 
 .Section_2_main {
   width: 1140px;
-  height: 370px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
@@ -123,11 +123,12 @@ p {
 
 .Section_2_main_populate {
   width: 100%;
-  height: 100%;
+  height: 370px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 .Section_2_main_populate h2 {
@@ -144,18 +145,38 @@ p {
 
 .Section_2_main_populate_line span {
   width: 78px;
-  height: 2px;
+  height: 3px;
   display: inline-block;
   margin: 0 auto;
   background-color: #003c85;
-  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
-.Section_2_main_populate p {
+.Section_2_main_populate_text {
   color: #616161;
   font-family: "Open sans", Sans-serif;
   font-size: 15px;
   font-weight: 400;
+  padding: 100px;
+}
+
+.Section_2_main_populate_text h4 {
+  font-size: 24px;
+  color: #003c85;
+}
+
+.Section_2_main_populate_text p {
+  line-height: 25px;
+  font-size: 16px;
+  color: #616161;
+}
+
+.Section_2_main_populate_text hr {
+  border: 1px solid #237AF6;
+}
+
+.Section_2_main_populate_text a {
+  color: #db1037;
 }
 
 .Section_2_main_populate_Tag {
@@ -229,7 +250,6 @@ p {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .Section_3_container_part1_populated_title {
@@ -268,26 +288,23 @@ p {
 
 .Section_3_container_part1_populated_text {
   width: 100%;
-  height: 172px;
 }
 
 .Section_3_container_part1_populated_text p {
+  height: 60px;
   font-size: 13px;
-  line-height: 20px;
+  line-height: 22px;
   color: #616161;
+  overflow: hidden;
 }
 
 .Section_3_container_part2 {
   width: 278px;
   height: 450px;
   padding: 10px;
-}
-
-.Section_3_container_part2_img {
-  width: 100%;
-  height: 100%;
-  width: 100%;
-  height: 100%;
+  background-image: url(/img/keegan2.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .Section_3_container_part2_img img {
@@ -312,12 +329,16 @@ p {
   width: 100%;
   height: 26px;
   margin-bottom: 20px;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .Section_3_container_part3_populated_line {
   width: 100%;
   height: 7px;
   margin-bottom: 20px;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .Section_3_container_part3_populated_container {
@@ -347,19 +368,26 @@ p {
 .Section_3_container_part3_populated_container_list_detail {
   width: 125px;
   height: 75px;
-  background-color: orange;
 }
 
 .Section_3_container_part3_populated_container_list_detail_title {
   width: 125px;
   height: 47px;
-  background-color: green;
+  font-size: 16px;
+  text-align: left;
+}
+
+.Section_3_container_part3_populated_container_list_detail_title a {
+  color: #003c85;
 }
 
 .Section_3_container_part3_populated_container_list_detail_price {
   width: 125px;
   height: 29px;
-  background-color: purple;
+  font-size: 16px;
+  text-align: left;
+  color: #db1037;
+  font-weight: 800;
 }
 
 .section4 {
@@ -446,6 +474,9 @@ p {
   height: 462px;
   display: flex;
   align-items: center;
+  background-image: url(/img/Small_Things_Like_These2.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .section_5_wellpaper img {

@@ -11,10 +11,53 @@
     <link rel="stylesheet" href="css/common.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/bookinfo.js"></script>
 
 </head>
 
 <body>
+
+    <!-- header -->
+
+    <header>
+        <div class="container">
+            <div class="container_menu">
+                <img src="img/menu_icon.png" alt="">
+            </div>
+            <div class="container_logo">
+                <img src="img/Logo.jpg" alt="">
+            </div>
+            <div class="container_product-search">
+                <form class="searchform">
+                    <div class="container_product-search_category">
+                        <select name="product_cat" id="product_cat">
+                            <option class="level-0" value="Search">통합검색</option>
+                            <option class="level-0" value="Bookname">도서명</option>
+                            <option class="level-0" value="Authername">저자명</option>
+                            <option class="level-0" value="Publisher">출판사</option>
+                            <option class="level-0" value="ISBN">ISBN</option>
+                        </select>
+                    </div>
+                    <div class="container_product-search_input">
+                        <input type="text" id="Product-search-keyword">
+                        <label for="Product-search-keyword">Type to search and hit enter</label>
+                        <button type="submit" class="search-icon">
+                            <i></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="container_menu-user">
+                <a href="">Log in</a>
+            </div>
+            <div class="container_menu-cart">
+                <button>
+                    <span>Cart</span>
+                </button>
+            </div>
+        </div>
+
+    </header>
 
     <!-- Section_1 -->
 
@@ -30,10 +73,11 @@
                         Like These.</h1>
                     <h6>by: Claire Keegan</h6>
                     <p>1985년 아일랜드의 작은 마을에서부터. <br>
-                        크리스마스에 이르는 몇 주 동안, 석탄 상인이자 가장인 빌 퍼롱(Bill Furlong)은 그의 가장 바쁜 계절을 맞이합니다. 어느 날 아침 일찍, 빌은 지역 수녀원에 말을 전하게 되는 중, 자신의 과거와 교회에 의해 통제되는 마을의 복잡한 침묵에 직면할 수 밖에 없는 것을 발견하게 됩니다.</p>
+                        크리스마스에 이르는 몇 주 동안, 석탄 상인이자 가장인 빌 퍼롱(Bill Furlong)은 그의 가장 바쁜 계절을 맞이합니다. 어느 날 아침 일찍, 빌은 지역 수녀원에 말을
+                        전하게 되는 중, 자신의 과거와 교회에 의해 통제되는 마을의 복잡한 침묵에 직면할 수 밖에 없는 것을 발견하게 됩니다.</p>
                     <div class="Section_1_title_left_list_wrapper">
                         <a href="">
-                            <span>Read more</span>
+                            <span>장바구니 담기</span>
                         </a>
                     </div>
                 </div>
@@ -57,15 +101,12 @@
                 <div class="Section_2_main_populate_line">
                     <span></span>
                 </div>
-                <p>It is 1985 in a small Irish town. During the weeks leading up to Christmas, <br>
-                    Bill Furlong, a coal merchant and family man faces into his busiest season. Early one morning, <br>
-                    while delivering an order to the local convent, Bill makes a discovery which forces him to <br>
-                    confront both his past and the complicit silences of a town controlled by the church. </p>
+                <div class="Section_2_main_populate_text"></div>
                 <div class="Section_2_main_populate_Tag">
                     <div class="Section_2_main_populate_Tag_part">
                         <div class="Section_2_main_populate_Tag_part_icon">
                             <div class="Section_2_main_populate_Tag_part_icon_image">
-                            <img src="img/info_1.png" alt="">
+                                <img src="img/info_1.png" alt="">
                             </div>
                         </div>
                         <div class="Section_2_main_populate_Tag_part_name">
@@ -75,7 +116,7 @@
                     <div class="Section_2_main_populate_Tag_part">
                         <div class="Section_2_main_populate_Tag_part_icon">
                             <div class="Section_2_main_populate_Tag_part_icon_image">
-                            <img src="img/info_2.png" alt="">
+                                <img src="img/info_2.png" alt="">
                             </div>
                         </div>
                         <div class="Section_2_main_populate_Tag_part_name">
@@ -85,7 +126,7 @@
                     <div class="Section_2_main_populate_Tag_part">
                         <div class="Section_2_main_populate_Tag_part_icon">
                             <div class="Section_2_main_populate_Tag_part_icon_image">
-                            <img src="img/info_3.png" alt="">
+                                <img src="img/info_3.png" alt="">
                             </div>
                         </div>
                         <div class="Section_2_main_populate_Tag_part_name">
@@ -95,7 +136,7 @@
                     <div class="Section_2_main_populate_Tag_part">
                         <div class="Section_2_main_populate_Tag_part_icon">
                             <div class="Section_2_main_populate_Tag_part_icon_image">
-                            <img src="img/info_4.png" alt="">
+                                <img src="img/info_4.png" alt="">
                             </div>
                         </div>
                         <div class="Section_2_main_populate_Tag_part_name">
@@ -116,7 +157,7 @@
             <div class="Section_3_container_part1">
                 <div class="Section_3_container_part1_populated">
                     <div class="Section_3_container_part1_populated_title">
-                    <h2>작가 소개</h2>
+                        <h2>작가 소개</h2>
                     </div>
                     <div class="Section_3_container_part1_populated_line">
                         <span></span>
@@ -127,16 +168,11 @@
                     <div class="Section_3_container_part1_populated_subinfo">
                         <h2>아일랜드의 현대 문학가, 작가</h2>
                     </div>
-                    <div class="Section_3_container_part1_populated_text">
-                        <p>
-                            1968년 아일랜드 위클로에서 태어났다. 17세에 미국으로 건너가 로욜라대학교에서 영문학과 정치학을 공부했다. 이어서 웨일스대학교에서 문예창작 석사 학위를 받아 학부생을 가르쳤고, 더블린트리니티칼리지에서 철학 석사 학위를 취득했다. 《가디언》은 키건의 작품을 두고 “탄광 속의 다이아몬드처럼 희귀하고 진귀하다”라고 평한 바 있다. 이는 그가 24년간 활동하면서 단 4권의 책만을 냈는데 그 모든 작품들이 얇고 예리하고 우수하기 때문이다.
-                        </p>
-                    </div>
+                    <div class="Section_3_container_part1_populated_text"></div>
                 </div>
             </div>
             <div class="Section_3_container_part2">
                 <div class="Section_3_container_part2_img">
-                    <img src="img/keegan2.jpg" alt="">
                 </div>
             </div>
             <div class="Section_3_container_part3">
@@ -148,33 +184,39 @@
                         <span></span>
                     </div>
                     <div class="Section_3_container_part3_populated_container">
-<div class="Section_3_container_part3_populated_container_list">
-    <div class="Section_3_container_part3_populated_container_list_populeted">
-        <figure class="Section_3_container_part3_populated_container_list_image"></figure>
-        <div class="Section_3_container_part3_populated_container_list_detail">
-            <h3 class="Section_3_container_part3_populated_container_list_detail_title"></h3>
-            <div class="Section_3_container_part3_populated_container_list_detail_price"></div>
-        </div>
-    </div>
-</div>
-<div class="Section_3_container_part3_populated_container_list">
-    <div class="Section_3_container_part3_populated_container_list_populeted">
-        <figure class="Section_3_container_part3_populated_container_list_image"></figure>
-        <div class="Section_3_container_part3_populated_container_list_detail">
-            <h3 class="Section_3_container_part3_populated_container_list_detail_title"></h3>
-            <div class="Section_3_container_part3_populated_container_list_detail_price"></div>
-        </div>
-    </div>
-</div>
-<div class="Section_3_container_part3_populated_container_list">
-    <div class="Section_3_container_part3_populated_container_list_populeted">
-        <figure class="Section_3_container_part3_populated_container_list_image"></figure>
-        <div class="Section_3_container_part3_populated_container_list_detail">
-            <h3 class="Section_3_container_part3_populated_container_list_detail_title"></h3>
-            <div class="Section_3_container_part3_populated_container_list_detail_price"></div>
-        </div>
-    </div>
-</div>
+                        <div class="Section_3_container_part3_populated_container_list">
+                            <div class="Section_3_container_part3_populated_container_list_populeted">
+                                <figure class="Section_3_container_part3_populated_container_list_image">
+                                    <a href=""></a>
+                                </figure>
+                                <div class="Section_3_container_part3_populated_container_list_detail">
+                                    <h3 class="Section_3_container_part3_populated_container_list_detail_title"></h3>
+                                    <div class="Section_3_container_part3_populated_container_list_detail_price"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Section_3_container_part3_populated_container_list">
+                            <div class="Section_3_container_part3_populated_container_list_populeted">
+                                <figure class="Section_3_container_part3_populated_container_list_image">
+                                    <a href=""></a>
+                                </figure>
+                                <div class="Section_3_container_part3_populated_container_list_detail">
+                                    <h3 class="Section_3_container_part3_populated_container_list_detail_title"></h3>
+                                    <div class="Section_3_container_part3_populated_container_list_detail_price"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Section_3_container_part3_populated_container_list">
+                            <div class="Section_3_container_part3_populated_container_list_populeted">
+                                <figure class="Section_3_container_part3_populated_container_list_image">
+                                    <a href=""></a>
+                                </figure>
+                                <div class="Section_3_container_part3_populated_container_list_detail">
+                                    <h3 class="Section_3_container_part3_populated_container_list_detail_title"></h3>
+                                    <div class="Section_3_container_part3_populated_container_list_detail_price"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -186,56 +228,138 @@
     <section class="section4">
         <div class="section_4_container">
             <div class="section_4_container_populated">
-<div class="section_4_container_populated_content">
-    더블린트리니티칼리지 철학 석사. 웨일스대학교 문예창작 석사. <br>
-    로욜라대학교 영문학, 정치학. 아일랜드 문학상, 윌리엄 트레버상, <br>
-에지 힐상, 데이비 번스 문학상, 오웰상(소설 부문) 수상</div>
-<div class="section_4_container_populated_profile">
-<div class="section_4_container_populated_profile_title">
-<div class="section_4_container_populated_profile_title_picture">
-    <img src="img/keegan.jpg" alt="">
-</div>
-<div class="section_4_container_populated_profile_title_text">
-    <div class="section_4_container_populated_profile_title_text_name">
-        Claire Keegan
-    </div>
-    <div class="section_4_container_populated_profile_title_text_job">
-        Short story writer
-    </div>
-</div>
-</div>
-</div>
+                <div class="section_4_container_populated_content">
+                    더블린트리니티칼리지 철학 석사. 웨일스대학교 문예창작 석사. <br>
+                    로욜라대학교 영문학, 정치학. 아일랜드 문학상, 윌리엄 트레버상, <br>
+                    에지 힐상, 데이비 번스 문학상, 오웰상(소설 부문) 수상</div>
+                <div class="section_4_container_populated_profile">
+                    <div class="section_4_container_populated_profile_title">
+                        <div class="section_4_container_populated_profile_title_picture">
+                            <img src="img/keegan.jpg" alt="">
+                        </div>
+                        <div class="section_4_container_populated_profile_title_text">
+                            <div class="section_4_container_populated_profile_title_text_name">
+                                Claire Keegan
+                            </div>
+                            <div class="section_4_container_populated_profile_title_text_job">
+                                Short story writer
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-<!-- section_5 -->
+    <!-- section_5 -->
 
-<section class="section_5">
-    <div class="section_5_wellpaper">
-        <img src="img/Small_Things_Like_These2.jpg" alt="">
-    <div class="section_5_container">
-        <div class="section_5_container_populated">
-            <div class="section_5_container_populated_text">
-                <p>《이처럼 사소한 것들》은 2024년 개봉 예정인 역사 드라마 영화이다. <br>
-                    팀 밀런츠가 감독을 맡았으며, 클레어 키건의 동명 소설이 원작이다. <br>
-                    제74회(2024년) 베를린 국제 영화제 개막작이자 황금곰상 경쟁후보작이다.</p>
-            </div>
-            <div class="section_5_container_populated_button">
-                <a href="">
-                    <span>Subscribe Now</span>
-                </a>
-            </div>
+    <section class="section_5">
+        <div class="section_5_wellpaper">
+            <div class="section_5_container">
+                <div class="section_5_container_populated">
+                    <div class="section_5_container_populated_text">
+                        <p>《이처럼 사소한 것들》은 2024년 개봉 예정인 역사 드라마 영화이다. <br>
+                            팀 밀런츠가 감독을 맡았으며, 클레어 키건의 동명 소설이 원작이다. <br>
+                            제74회(2024년) 베를린 국제 영화제 개막작이자 황금곰상 경쟁후보작이다.</p>
+                    </div>
+                    <div class="section_5_container_populated_button">
+                        <a href="">
+                            <span>영화 보러가기</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- Notice -->
+    <!-- Footer -->
 
-    <p class="notice">Copyright 2022 북코아. All rights reserved [사업자정보] 대표전화 : 1544-2949 | 대표 : 박재용 | 개인정보 보호책임자 : 박재용
-        사업자등록번호 : 257-08-02667 <br>
-        | 통신판매업 신고번호 : 제 2024-인천남동구-0150호. 인천시 남동구 남동대로709, 4층(구월동,보광빌딩)</p>
+    <footer>
+
+        <div class="footer_widget-area">
+            <div class="footer_widget-area_container">
+                <div class="grid_item">
+                    <div class="contact_info">
+                        <h3>Contact Info</h3>
+                        <p>
+                            1,150,000만명이 선택한 서점, 북코아입니다.<br>
+                            원하는 도서를 찻을 수 있도록 성의를 다하겠습니다.
+                        </p>
+                        <p>
+                            회사는 개인정보 보호법 제32조에 따라
+                            <br>회원가입, 상담, 서비스 신청 등등을 위해
+                            <br>아래와 같은 개인정보를 수집하고 있습니다.
+                        </p>
+                        <span>
+                            <a href="">1544-2949</a>
+                        </span>
+                        <br>
+                        <span>
+                            <a href="">help@bookoa.com</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="grid_item">
+                    <div class="social_network">
+                        <h3>Stay Connected</h3>
+                        <p>Stay connected and get interesting news & coupon</p>
+                        <div class="social-links_medium_rounded">
+                            <a href="https://www.facebook.com/Bookoa/?locale=ko_KR">
+                                <span class="social-links_medium_rounded-social" style="background-color: #3b5998;">
+                                    <img src="img/stay1.png" alt="">
+                                </span>
+                            </a>
+                            <a href="https://twitter.com/bookoa?lang=ko">
+                                <span class="social-links_medium_rounded-social" style="background-color: #55acee;">
+                                    <img src="img/stay2.png" alt="">
+                                </span>
+                            </a>
+                            <a href="https://www.pinterest.co.kr/vintagelabel/book/">
+                                <span class="social-links_medium_rounded-social" style="background-color: #e02f2f;">
+                                    <img src="img/stay3.png" alt="">
+                                </span>
+                            </a>
+                            <a href="https://search.bookoa.co.kr/">
+                                <span class="social-links_medium_rounded-social" style="background-color: #007bb5;">
+                                    <img src="img/stay4.png" alt="">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_item">
+                    <div class="subscribe-form">
+                        <h3>Subscribe Newsletter</h3>
+                        <p>Get latest news on your inbox</p>
+                        <form action="">
+                            <div class="form-fields">
+
+                                <label>Email address</label>
+                                <input type="email" name="email">
+                                <input type="submit" value="Sign up">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_colophon">
+            <div class="container">
+                <div class="container_lift">
+                    <span>Copyright 2022 <a href="https://www.bookoa.co.kr/">북코아</a>. All rights reserved</span>
+                </div>
+                <div class="container_right">
+                    <img src="img/card info.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Notice -->
+        <p class="notice">Copyright 2022 북코아. All rights reserved [사업자정보] 대표전화 : 1544-2949 | 대표 : 박재용 | 개인정보 보호책임자 : 박재용
+            사업자등록번호 : 257-08-02667 <br>
+            | 통신판매업 신고번호 : 제 2024-인천남동구-0150호. 인천시 남동구 남동대로709, 4층(구월동,보광빌딩)</p>
+    </footer>
+
 </body>
 
 </html>
