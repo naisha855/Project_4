@@ -4,6 +4,8 @@ $(function () {
 
     for (let i = 0; i < search.length; i++) {
 
+// 도서 적용
+
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
@@ -38,10 +40,39 @@ $(function () {
 
 
     }
+
+// 자세히 보기 문단 더보기와 닫기
+
     $(function () {
-        $(".Section_2_main_populate_text").append("자세히보기");
-        $(".Section_3_container_part1_populated_text").append("자세히보기");
+        $(".del1").click(function(){
+            if($(this).text()=="[더 보기]"){
+                $('.Section_2_main_populate_text').animate({height: 2350})
+                $(this).text('[닫기]')
+            }else{
+                $('.Section_2_main_populate_text').animate({height: 305})
+                $(this).text('[더 보기]')
+            }
+            
+        });
+       
     })
+
+
+    $(function () {
+        $(".del2").click(function(){
+            if($(this).text()=="[더 보기]"){
+                $('.Section_3_container_part1_populated_text p').animate({height: 325})
+                $(this).text('[닫기]')
+            }else{
+                $('.Section_3_container_part1_populated_text p').animate({height: 60})
+                $(this).text('[더 보기]')
+            }
+            
+        });
+       
+    })
+
+// 메모장 페이지 적용
 
     $(function () {
         $.get("./txt/bookinfo_small_things_like_these.txt", function (data) {

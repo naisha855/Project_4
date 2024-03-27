@@ -118,6 +118,10 @@ header {
   line-height: inherit;
 }
 
+#Product-search-keyword:focus {
+  outline: none;
+}
+
 #product_cat {
   width: 182px;
   height: 38px;
@@ -328,6 +332,10 @@ footer {
   color: #db1037;
   padding-right: 20px;
   background-color: transparent;
+}
+
+.form-fields input:focus {
+  outline: none;
 }
 
 .form-fields input:nth-of-type(2) {

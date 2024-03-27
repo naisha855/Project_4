@@ -1,5 +1,7 @@
-<h4>[책 소개]</h4>
-<br><hr><br>
+<br><br>
+
+<h4>[타이틀]</h4>
+<br><hr><br><br><br><br>
 <p>선데이 타임즈와 아이리시 타임즈 베스트셀러 
 
 관중, 아이리시 타임즈, 아이리시 인디펜던트 올해의 책 선정
@@ -15,16 +17,18 @@
 '포스터, 이런 작은 것들'의 저자가 오랫동안 기다려온 신작은 잊지 못할 희망과 조용한 영웅주의, 부드러움의 이야기입니다.
 </p>
 
-
+<br><br><br>
 
 <h4>[트레일러 영상]</h4>
-<br><hr><br>
+<br><hr><br><br><br><br>
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/iPqD-Aykgns" title="Claire Keegan answers readers&#39; questions about &#39;Small Things Like These&#39; | The Booker Prize" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
 <a>https://www.youtube.com/watch?v=iPqD-Aykgns&t=1s</a>
 
-
+<br><br><br>
 
 <h4>[기본정보]</h4>
-<br><hr><br>
+<br><hr><br><br><br><br>
 <p>ISBN	9780571368709 ( 0571368700 )<br><br>
 발행(출시)일자	2022년 11월 03일<br><br>
 쪽수	128쪽<br><br>
@@ -32,10 +36,10 @@
 총권수	1권<br><br>
 언어	영어<br><br></p>
 
-
+<br><br><br>
 
 <h4>[출판사 서평]</h4>
-<br><hr><br>
+<br><hr><br><br><br><br>
 
 진정한 1세대 작가. - 타임즈지
 
