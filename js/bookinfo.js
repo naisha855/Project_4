@@ -4,7 +4,7 @@ $(function () {
 
     for (let i = 0; i < search.length; i++) {
 
-// 도서 적용
+        // 도서 적용
 
         $.ajax({
             method: "GET",
@@ -15,16 +15,16 @@ $(function () {
         })
 
             .done(function (msg) {
-                if(i==1){
+                if (i == 1) {
                     $(".Section_3_container_part3_populated_container_list_populeted").eq(i).find('figure>a').append("<img src='" + msg.documents[1].thumbnail + "'/>");
                     $(".Section_3_container_part3_populated_container_list_populeted").eq(i).find('h3').append("<a href=''>" + msg.documents[1].title + "</a>");
                     $(".Section_3_container_part3_populated_container_list_populeted").eq(i).find('.Section_3_container_part3_populated_container_list_detail_price').append(msg.documents[1].price);
-                }else{
+                } else {
                     $(".Section_3_container_part3_populated_container_list_populeted").eq(i).find('figure>a').append("<img src='" + msg.documents[0].thumbnail + "'/>");
-                $(".Section_3_container_part3_populated_container_list_populeted").eq(i).find('h3').append("<a href=''>" + msg.documents[0].title + "</a>");
-                $(".Section_3_container_part3_populated_container_list_populeted").eq(i).find('.Section_3_container_part3_populated_container_list_detail_price').append(msg.documents[0].price);
+                    $(".Section_3_container_part3_populated_container_list_populeted").eq(i).find('h3').append("<a href=''>" + msg.documents[0].title + "</a>");
+                    $(".Section_3_container_part3_populated_container_list_populeted").eq(i).find('.Section_3_container_part3_populated_container_list_detail_price').append(msg.documents[0].price);
                 }
-                
+
 
             });
 
@@ -41,38 +41,36 @@ $(function () {
 
     }
 
-// 자세히 보기 문단 더보기와 닫기
+    // 자세히 보기 문단 더보기와 닫기
 
     $(function () {
-        $(".del1").click(function(){
-            if($(this).text()=="[더 보기]"){
-                $('.Section_2_main_populate_text').animate({height: 2350})
+        $(".del1").click(function () {
+            if ($(this).text() == "[더 보기]") {
+                $('.Section_2_main_populate_text').animate({ height: 2350 })
                 $(this).text('[닫기]')
-            }else{
-                $('.Section_2_main_populate_text').animate({height: 305})
+            } else {
+                $('.Section_2_main_populate_text').animate({ height: 305 })
                 $(this).text('[더 보기]')
             }
-            
         });
-       
     })
 
 
     $(function () {
-        $(".del2").click(function(){
-            if($(this).text()=="[더 보기]"){
-                $('.Section_3_container_part1_populated_text p').animate({height: 325})
+        $(".del2").click(function () {
+            if ($(this).text() == "[더 보기]") {
+                $('.Section_3_container_part1_populated_text p').animate({ height: 325 })
                 $(this).text('[닫기]')
-            }else{
-                $('.Section_3_container_part1_populated_text p').animate({height: 60})
+            } else {
+                $('.Section_3_container_part1_populated_text p').animate({ height: 60 })
                 $(this).text('[더 보기]')
             }
-            
+
         });
-       
+
     })
 
-// 메모장 페이지 적용
+    // 메모장 페이지 적용
 
     $(function () {
         $.get("./txt/bookinfo_small_things_like_these.txt", function (data) {
