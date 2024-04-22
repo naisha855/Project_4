@@ -24,7 +24,6 @@ p {
   color: rgba(255, 255, 255, 0.9098039216);
   font-size: 16px;
   font-weight: 400;
-  font-family: "Open sans", "Sans-serif";
 }
 
 section {
@@ -90,7 +89,6 @@ section {
 }
 
 .Section_1_title_left_list_wrapper a {
-  font-family: "Open Sans", "Sans-serif";
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
@@ -160,7 +158,6 @@ section {
 .Section_2_main_populate_text {
   height: 305px;
   color: #616161;
-  font-family: "Open sans", Sans-serif;
   font-size: 15px;
   font-weight: 400;
   overflow: hidden;
